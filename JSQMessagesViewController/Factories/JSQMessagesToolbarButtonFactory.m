@@ -20,6 +20,7 @@
 
 #import "UIColor+JSQMessages.h"
 #import "UIImage+JSQMessages.h"
+#import "NSString+JSQMessages.h"
 
 
 @implementation JSQMessagesToolbarButtonFactory
@@ -43,7 +44,7 @@
 
 + (UIButton *)defaultSendButtonItem
 {
-    NSString *sendTitle = NSLocalizedStringFromTable(@"Send", @"JSQMessages", @"Text for the send button on the messages view toolbar");
+	NSString *sendTitle = [NSString jsq_localizedStringForKey:@"Send"];
     
     UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectZero];
     [sendButton setTitle:sendTitle forState:UIControlStateNormal];

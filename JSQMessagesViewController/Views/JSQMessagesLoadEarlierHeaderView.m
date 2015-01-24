@@ -19,6 +19,8 @@
 
 #import "JSQMessagesLoadEarlierHeaderView.h"
 
+#import "NSString+JSQMessages.h"
+
 const CGFloat kJSQMessagesLoadEarlierHeaderViewHeight = 32.0f;
 
 
@@ -54,7 +56,7 @@ const CGFloat kJSQMessagesLoadEarlierHeaderViewHeight = 32.0f;
     [super awakeFromNib];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.backgroundColor = [UIColor clearColor];
-    [self.loadButton setTitle:NSLocalizedStringFromTable(@"Load Earlier Messages", @"JSQMessages", @"Text for button to load previously sent messages")
+    [self.loadButton setTitle:[NSString jsq_localizedStringForKey:@"Load Earlier Messages"]
                      forState:UIControlStateNormal];
 }
 

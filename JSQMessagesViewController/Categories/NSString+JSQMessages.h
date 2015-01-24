@@ -25,4 +25,9 @@
  */
 - (NSString *)jsq_stringByTrimingWhitespace;
 
+/**
+ *	@return Localized string for specified key. If there is no localization key is returned.
+ */
++ (instancetype)jsq_localizedStringForKey:(NSString *)key;
+
 @end

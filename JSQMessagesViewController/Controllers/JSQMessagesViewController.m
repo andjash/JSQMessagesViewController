@@ -128,7 +128,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     self.collectionView.delegate = self;
     
     self.inputToolbar.delegate = self;
-    self.inputToolbar.contentView.textView.placeHolder = NSLocalizedStringFromTable(@"New Message", @"JSQMessages", @"Placeholder text for the message input text view");
+	self.inputToolbar.contentView.textView.placeHolder = [NSString jsq_localizedStringForKey:@"New Message"];
     self.inputToolbar.contentView.textView.delegate = self;
     
     self.senderId = @"JSQDefaultSender";
