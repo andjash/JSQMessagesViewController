@@ -444,7 +444,7 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
         finalSize = [[messageItem media] mediaViewDisplaySize];
     }
     else {
-        CGSize avatarSize = [self jsq_avatarSizeForIndexPath:indexPath];
+        CGSize avatarSize = [self sizeForAvatarAtIndexPath:indexPath];
         
         //  from the cell xibs, there is a 2 point space between avatar and bubble
         CGFloat spacingBetweenAvatarAndBubble = 2.0f;
@@ -494,7 +494,11 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
 
 - (CGSize)sizeForAvatarAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [self jsq_avatarSizeForIndexPath:indexPath];
+	CGSize size = [self.collectionView.delegate collectionView:self.collectionView layout:self sizeForAvatarAtIndexPath:indexPath];
+	if (CGSizeEqualToSize(CGSizeZero, size)) {
+		size = [self jsq_avatarSizeForIndexPath:indexPath];
+	}
+	return size;
 }
 
 - (void)jsq_configureMessageCellLayoutAttributes:(JSQMessagesCollectionViewLayoutAttributes *)layoutAttributes

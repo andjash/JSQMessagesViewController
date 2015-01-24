@@ -627,6 +627,12 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     return 0.0f;
 }
 
+- (CGSize)collectionView:(JSQMessagesCollectionView *)collectionView
+				  layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout sizeForAvatarAtIndexPath:(NSIndexPath *)indexPath
+{
+	return CGSizeZero;
+}
+
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView
  didTapAvatarImageView:(UIImageView *)avatarImageView
            atIndexPath:(NSIndexPath *)indexPath { }

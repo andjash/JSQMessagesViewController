@@ -555,6 +555,12 @@
     return 0.0f;
 }
 
+- (CGSize)collectionView:(JSQMessagesCollectionView *)collectionView
+				  layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout sizeForAvatarAtIndexPath:(NSIndexPath *)indexPath
+{
+	return CGSizeZero;
+}
+
 #pragma mark - Responding to collection view tap events
 
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView
