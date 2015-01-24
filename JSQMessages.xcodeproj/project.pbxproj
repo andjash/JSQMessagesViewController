@@ -325,13 +325,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8841B88219F4983C00EA16B6 /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
 		88A25EF919D8DEC400924534 = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +410,6 @@
 		88A25F3F19D8E01A00924534 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8841B88219F4983C00EA16B6 /* Strings */,
 				8861666C19F492B70025B958 /* JSQMessagesAssets.bundle */,
 			);
 			path = Assets;
