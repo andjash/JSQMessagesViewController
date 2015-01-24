@@ -492,6 +492,11 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
     return CGSizeMake(self.itemWidth, ceilf(finalHeight));
 }
 
+- (CGSize)sizeForAvatarAtIndexPath:(NSIndexPath *)indexPath
+{
+	return [self jsq_avatarSizeForIndexPath:indexPath];
+}
+
 - (void)jsq_configureMessageCellLayoutAttributes:(JSQMessagesCollectionViewLayoutAttributes *)layoutAttributes
 {
     NSIndexPath *indexPath = layoutAttributes.indexPath;

@@ -194,4 +194,13 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault;
  */
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
+/**
+ *  Computes and returns the size of the avatar specified by indexPath.
+ *
+ *  @param indexPath The index path of the item to be displayed.
+ *
+ *  @return The size of the avatar displayed at indexPath.
+ */
+- (CGSize)sizeForAvatarAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
